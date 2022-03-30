@@ -1,27 +1,27 @@
 :root {
     --white-100: #f0f0f0;
     --black-100: #474747;
-    --green-100: #E5EFC1;
-    --green-200: #A2D5AB;
-    --green-300: #39AEA9;
-    --green-400: #557B83;
+    --color-100: #F2F013;
+    --color-200: #2FDD92;
+    --color-300: #34BE82;
+    --color-400: #2F86A6;
 }
 
 ::-webkit-scrollbar {
     width: 5px;
-    filter: drop-shadow(0px 1.5em 0.2em rgb(255, 0, 0));
+    filter: drop-shadow(0px 1.5em 0.2em var(--color-400));
     box-shadow: inset 0 0 5px rgb(0, 0, 0);
     border-radius: 10px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-    background: var(--green-200);
+    background: var(--color-200);
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: var(--green-400);
+    background: var(--color-400);
 }
 
 /* Handle on hover */
@@ -33,6 +33,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
+    user-select: none;
 }
 
 body {
@@ -47,11 +48,50 @@ a {
 header {
     color: var(--white-100);
     padding: 0.3em 0;
-    background-color: var(--green-300);
+    background-color: var(--color-300);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.356);
+}
+
+#survey {
+    margin: 1em 1em;
+    display: flex;
+    flex-direction: column;
+    display: inline-block;
+}
+
+#survey-first {
+    margin-top: 1em;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    color: var(--color-200);
+    font-size: 0.6em;
+}
+
+#survey img{
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    cursor: pointer;
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.336));
+}
+
+.survey-bg {
+    height: 5px;
+    width: 200px;
+    background-color: var(--color-400);
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+}
+
+#survey-first-value {
+    height: 2px;
+    background-color: var(--color-200);
 }
 
 #kahoot-rank {
@@ -67,6 +107,7 @@ header {
     justify-content: center;
     /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.356); */
     gap: 0.5em;
+    display: inline-block;
 }
 
 #kahoot-rank h4 {
@@ -77,6 +118,7 @@ header {
 
 #kahoot-winners {
     width: 20%;
+    margin: 0 auto;
     background-color: var(--black-100);
     border-radius: 0.3em;
     text-align: center;
@@ -86,17 +128,20 @@ header {
 }
 
 #first-student i{
+    width: 1.2em;
     color: gold;
     font-size: 3em;
     filter: drop-shadow(0 0 1px rgba(0, 0, 0, 0.425));
 }
 
 #second-student i{
+    width: 1.2em;
     color: silver;
     font-size: 2em;
 }
 
 #third-student i{
+    width: 1.2em;
     color: rgb(196, 111, 0);
     font-size: 2em;
 }
@@ -104,7 +149,7 @@ header {
 #kahoot-rank p {
     /* width: 50px; */
     font-family: monospace;
-    color: var(--green-100);
+    color: var(--color-100);
     font-size: 0.65em;
     text-overflow: ellipsis;
 }
@@ -116,7 +161,6 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* flex-direction: column; */
     gap: 3em;
     flex-wrap: wrap;
 }
@@ -125,7 +169,7 @@ header {
     height: 250px;
     color: var(--black-100);
     width: 50%;
-    background-color: var(--green-200);
+    background-color: var(--color-200);
     padding: 1em 2em 0 2em;
     border-radius: 0.3em;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.356);
@@ -158,7 +202,7 @@ header {
 
 .card strong {
     font-family: monospace;
-    color: var(--green-400);
+    color: var(--color-400);
     font-weight: 900;
     cursor: pointer;
 }
@@ -174,7 +218,7 @@ header {
 }
 
 .card i {
-    color: var(--green-400);
+    color: var(--color-400);
     font-size: 1.2em;
     text-align: center;
     cursor: pointer;
@@ -182,7 +226,7 @@ header {
 }
 
 .card-counter {
-    color: var(--green-400);
+    color: var(--color-400);
     font-size: 0.8em;
     text-align: center;
     padding-top: 0.3em;
